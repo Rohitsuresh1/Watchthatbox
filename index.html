@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch That Box</title>
+    
+</head>
+<body>
+
+    <p>Press the buttons to change the box!</p>
+
+    <div id="box" style="height:150px; width:150px; background-color:orange; margin:25px"></div>
+
+    <button id="Grow">Grow</button>
+    <button id="Blue">Blue</button>
+    <button id="Fade">Fade</button>
+    <button id="Reset">Reset</button>
+    
+    <script type="text/javascript">
+        var wdth=150;
+        var hgt=150;
+        document.getElementById("Grow").addEventListener("click", function(){
+            wdth+= 50;
+            hgt+= 50;
+            document.getElementById("box").style.height = wdth + "px";
+            document.getElementById("box").style.width = hgt + "px";
+        });
+
+        document.getElementById("Blue").addEventListener("click", function(){
+            document.getElementById("box").style.backgroundColor = "blue";
+        });
+
+        document.getElementById("Fade").addEventListener("click", function(){
+            document.getElementById("box").style.opacity = "0.2";
+        });
+
+        document.getElementById("Reset").addEventListener("click", function(){
+            document.getElementById("box").style = "height:150px; width:150px; background-color:orange; margin:25px";
+        });
+
+
+    </script>
+    
+    
+</body>
+</html>
